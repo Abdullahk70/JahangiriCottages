@@ -3,11 +3,5 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": {
-      "description": "The public URL of your site",
-      "required": false
-    }
-  },
   "regions": ["arn1"]
 }
