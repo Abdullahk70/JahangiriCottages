@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /_next/
+Disallow: /private/
+
+Sitemap: https://jahangiri-cottages.vercel.app/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
