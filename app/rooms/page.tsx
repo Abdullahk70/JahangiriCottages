@@ -24,7 +24,7 @@ const roomTypes = [
     name: "Single Bedroom",
     capacity: "1-2 Guests",
     price: 10500,
-    image: "/jahangiri/1718186762.jpg",
+    image: "/rooms/single-bedroom.jpeg",
     description:
       "Perfect for the discerning solo traveler or intimate couple retreat. This cozy sanctuary offers contemporary elegance with mountain views, featuring premium bedding and modern amenities.",
     features: [
@@ -42,7 +42,7 @@ const roomTypes = [
     name: "Double Bedroom Suite",
     capacity: "2-3 Guests",
     price: 10500,
-    image: "/jahangiri/92e813f570f42a6188043182560b672b.jpg",
+    image: "/rooms/double-bedroom-suite.jpeg",
     description:
       "Our signature suite offering spacious luxury with breathtaking valley views. Ideal for couples or small families seeking a premium mountain escape with sophisticated ambiance.",
     features: [
@@ -61,7 +61,7 @@ const roomTypes = [
     name: "Executive Bedroom",
     capacity: "2-4 Guests",
     price: 10500,
-    image: "/jahangiri/download.jpeg",
+    image: "/rooms/executive-bedroom.jpeg",
     description:
       "The epitome of sophistication. A luxurious retreat with dedicated work space, separate living area, and premium appointments designed for discerning travelers who demand excellence.",
     features: [
@@ -80,7 +80,7 @@ const roomTypes = [
     name: "Family Room",
     capacity: "4-6 Guests",
     price: 10500,
-    image: "/jahangiri/evening-view-of-the-nine.jpg",
+    image: "/rooms/family-room.jpeg",
     description:
       "Generously designed for family comfort and bonding. Multiple sleeping areas combined with spacious living quarters create the perfect base for unforgettable family memories in the mountains.",
     features: [
@@ -99,7 +99,7 @@ const roomTypes = [
     name: "Twin Room",
     capacity: "2-4 Guests",
     price: 10500,
-    image: "/jahangiri/images (1).jpeg",
+    image: "/rooms/twin-room.jpeg",
     description:
       "Perfectly appointed for friends or colleagues traveling together. Twin beds provide individual comfort while shared amenities ensure a social experience in pristine mountain surroundings.",
     features: [
@@ -118,7 +118,7 @@ const roomTypes = [
     name: "Family Room with Bunker Beds",
     capacity: "6-8 Guests",
     price: 10500,
-    image: "/jahangiri/images (2).jpeg",
+    image: "/rooms/family-room-with-bunker-beds.jpeg",
     description:
       "The ultimate family accommodation designed for groups and multi-generational stays. Adventure-ready with fun bunk arrangements and ample space for everyone to feel at home.",
     features: [

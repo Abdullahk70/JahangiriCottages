@@ -28,13 +28,11 @@ import {
 } from "lucide-react";
 
 const images = [
-  "/jahangiri/1718186762.jpg",
-  "/jahangiri/92e813f570f42a6188043182560b672b.jpg",
-  "/jahangiri/download.jpeg",
-  "/jahangiri/evening-view-of-the-nine.jpg",
-  "/jahangiri/images (1).jpeg",
-  "/jahangiri/images (2).jpeg",
-  "/jahangiri/images.jpeg",
+  { src: "/carousel/img1.jpeg", portrait: true },
+  { src: "/carousel/img3.jpeg", portrait: false },
+  { src: "/carousel/img4.jpeg", portrait: false },
+  { src: "/carousel/img5.jpeg", portrait: false },
+  { src: "/carousel/img2.jpeg", portrait: true },
 ];
 
 const stats = [
@@ -145,31 +143,37 @@ const rooms = [
     name: "Single Bedroom",
     capacity: "1-2 Guests",
     desc: "Cozy and comfortable room perfect for solo travelers or couples",
+    image: "/rooms/single-bedroom.jpeg",
   },
   {
     name: "Double Bedroom Suite",
     capacity: "2-3 Guests",
     desc: "Spacious suite with premium amenities and mountain views",
+    image: "/rooms/double-bedroom-suite.jpeg",
   },
   {
     name: "Executive Bedroom",
     capacity: "2-4 Guests",
     desc: "Luxurious accommodation with separate living area and work space",
+    image: "/rooms/executive-bedroom.jpeg",
   },
   {
     name: "Family Room",
     capacity: "4-6 Guests",
     desc: "Generously sized room designed for families with multiple beds",
+    image: "/rooms/family-room.jpeg",
   },
   {
     name: "Twin Room",
     capacity: "2-4 Guests",
     desc: "Comfortable twin-bedded room ideal for friends or small families",
+    image: "/rooms/twin-room.jpeg",
   },
   {
     name: "Family Room with Bunker Beds",
     capacity: "6-8 Guests",
     desc: "Spacious family accommodation with bunker beds for larger groups",
+    image: "/rooms/family-room-with-bunker-beds.jpeg",
   },
 ];
 
@@ -189,17 +193,26 @@ export default function Home() {
       <section className="relative h-screen w-full overflow-hidden">
         {images.map((img, index) => (
           <motion.div
-            key={img}
+            key={img.src}
             initial={{ opacity: 0 }}
             animate={{ opacity: currentImage === index ? 1 : 0 }}
             transition={{ duration: 1.5 }}
             className="absolute inset-0"
           >
+            {img.portrait && (
+              <Image
+                src={img.src}
+                alt=""
+                aria-hidden
+                fill
+                className="object-cover scale-110 blur-2xl brightness-50"
+              />
+            )}
             <Image
-              src={img}
+              src={img.src}
               alt={`Jahangiri Fort ${index + 1}`}
               fill
-              className="object-cover"
+              className={img.portrait ? "object-contain" : "object-cover"}
               priority={index === 0}
             />
           </motion.div>
@@ -434,8 +447,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="h-40 bg-linear-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                  <div className="w-12 h-12 border-2 border-amber-500 rounded-sm"></div>
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={room.image}
+                    alt={room.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
